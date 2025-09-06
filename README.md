@@ -1,13 +1,22 @@
 # onlinejudge
-要件（Requirements）
+#要件（Requirements）
+
 Linux（例: Ubuntu 22.04 / RockyLinux 9）
+
 PHP 8.2+ / Composer
+
 Node.js 18+ / npm
+
 PostgreSQL 15+（MySQLでも可・本READMEはPostgreSQL想定）
+
 Redis 6+（キュー用）
+
 isolate（サンドボックス）
+
 Ubuntu: sudo apt-get install isolate
+
 Rocky: EPEL もしくはソースからインストール
+
 
 実行系（ホストにインストール）
 g++（C++17）
