@@ -14,6 +14,23 @@ g++（C++17）
 python3
 javac(Java)
 
+主要ファイルの説明
+Path	役割
+app/Http/Controllers/ProblemController.php	問題一覧/詳細の表示（Inertia で React ページへ）
+app/Http/Controllers/SubmissionController.php	提出の受け付け・ステータス取得（JSON）
+app/Jobs/Judge/JudgeSubmissionJob.php	提出をキューで処理し IsolateJudge を呼び出す
+app/Services/Judge/IsolateJudge.php	isolate でコンパイル/実行/比較、サブタスク集計
+app/Models/Problem.php	問題メタ情報（制限・配点・対応言語）
+app/Models/Submission.php	提出（言語/コード/判定/得点/詳細）
+config/judge.php	言語定義（src/compile/run）と既定の制限値
+resources/js/Pages/Problems/Index.jsx	問題一覧 UI（Tailwind）
+resources/js/Pages/Problems/Show.jsx	制約表示・言語選択・提出・結果表示
+resources/js/Components/Badge.jsx	判定（AC/WA/TLE/RE/CE/PARTIAL…）の色分け表示
+routes/web.php	/problems, /problems/{slug} などのページルート
+routes/api.php	/api/submissions/{id} などの API ルート
+storage/app/problems/**	問題パッケージ（problem.yml と tests/*.in/out）
+storage/app/runs/**	実行時の一時ディレクトリ（自動削除）
+
 project-root/
 ├─ app/
 │  ├─ Http/
