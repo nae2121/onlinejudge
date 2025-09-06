@@ -1,0 +1,19 @@
+# storage/app/problems/abc001_a/problem.yml
+slug: abc001_a
+title: Addition
+time_limit_ms: 2000
+memory_limit_mb: 256
+allowed_langs:
+  - cpp
+  - python
+tests:
+  - { in: "tests/sample1.in", out: "tests/sample1.out", group: "sample" }
+  - { in: "tests/01.in",    out: "tests/01.out",      group: "small"  }
+  - { in: "tests/02.in",    out: "tests/02.out",      group: "small"  }
+  - { in: "tests/03.in",    out: "tests/03.out",      group: "large"  }
+scoring:
+  type: sum_subtasks
+  groups:
+    sample: 0
+    small: 200
+    large: 300
